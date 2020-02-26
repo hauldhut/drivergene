@@ -11,15 +11,15 @@ This repository contains source code, original/preprocessed datasets and publica
 (II) ANALYSIS
  - Depending on the cancer of interest and the purpose of research, several aspects of driver genes can be selected for analysis
 
-The workflow is also be applied to the identification and analysis of driver genes for breast cancer patients. More experimental details can be found in [Supplementary Materials](https://breakdance.github.io/breakdance/). All statistical analyses were performed using R statistical software.
+The workflow is also be applied to the identification and analysis of driver genes for breast cancer patients. All statistical analyses were performed using R statistical software.
 #### 2. Pipeline
 
-![Figure1](https://cldup.com/dTxpPi9lDf.thumb.png)
+![Figure1](https://imgur.com/ujBkHCl.png)
 Fig.1: Workflow for identification and analysis of driver genes. The workflow including two main steps is identification & analysis, in which, the former, -omics data is as input to identify driver genes by driver gene identification tools, and the latter, depending on the cancer of interest and the purpose of research, several aspects of driver genes can be selected for analysis. All tools used for each step can be selected depending on the purpose of the analyses and the input data. Abbreviation (for all sub-figures): CNVs, lymph and npi denote Copy number variants, the number of positive lymph nodes and the Nottingham prognostic index, respectively.
 
 Here, we use the METABRIC breast cancer (BRCA) dataset as an example to demonstrate the use of our workflow to (1) identify and (2) analyze the driver genes.
 
-![Figure2](https://cldup.com/dTxpPi9lDf.thumb.png)
+![Figure2](https://imgur.com/tpJceRp.png)
 Fig.2: Application of the workflow to the identification and analysis of driver genes for breast cancer patients.
 #### 3. Implementation
 **Step 1:** Identification of driver genes using the two tools [OncodriveCLUSTL](http://bbglab.irbbarcelona.org/oncodriveclustl/analysis) and [OncodriveFML](http://bbglab.irbbarcelona.org/oncodrivefml/analysis#).
@@ -41,4 +41,6 @@ Fig.2: Application of the workflow to the identification and analysis of driver 
 - Observing the differences between the two groups with the other clinical features: *"4.CNA-test.R"*
 
 #### 4. Contact
-Feel free to contact Quang-Huy Nguyen <huynguyen96.dnu AT gmail DOT com> or Duc-Hau Le <hauldhut AT gmail DOT com> for any questions about the paper, datasets, code and results.
+Feel free to contact [Quang-Huy Nguyen](https://github.com/huynguyen250896) <huynguyen96.dnu AT gmail DOT com> or [Duc-Hau Le](https://github.com/hauldhut) <hauldhut AT gmail DOT com> for any questions about the paper, datasets, code and results.
+
+
