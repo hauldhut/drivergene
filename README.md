@@ -22,8 +22,8 @@ Here, we use the METABRIC breast cancer (BRCA) dataset as an example to demonstr
 ![Figure2](https://imgur.com/tpJceRp.png)
 Fig.2: Application of the workflow to the identification and analysis of driver genes for breast cancer patients.
 #### 3. Implementation
-**Step 1:** Identification of driver genes using the two tools [OncodriveCLUSTL](http://bbglab.irbbarcelona.org/oncodriveclustl/analysis) and [OncodriveFML](http://bbglab.irbbarcelona.org/oncodrivefml/analysis#).
-**Step 2:** Enrichment analysis using the tool [g:Profiler](https://biit.cs.ut.ee/gprofiler/gost)
+**Step 1:** Identification of driver genes using the two tools [OncodriveCLUSTL](http://bbglab.irbbarcelona.org/oncodriveclustl/analysis) and [OncodriveFML](http://bbglab.irbbarcelona.org/oncodrivefml/analysis#). </br>
+**Step 2:** Enrichment analysis using the tool [g:Profiler](https://biit.cs.ut.ee/gprofiler/gost) </br>
 **Step 3:** Individual gene-clincial feature association analysis
 - Pre-processing gene expression data & clinical data: *"1.Clinical-preprocess.R"*
 - Finding driver genes significantly associated with survival rate: *"2.Clinical-SA.R"*
@@ -35,7 +35,7 @@ Fig.2: Application of the workflow to the identification and analysis of driver 
 - Visualizing the weighted gene co-expression network in terms of a heatmap: *"3.NetworkVisualization.R"*
 
 **Step 5:** Stratification
-- Pre-processing gene expression data & CNVs data: *"1.CNA-preprocess.R"*
+- Pre-processing clinical data & CNVs data: *"1.CNA-preprocess.R"*
 - Patient stratification by the identified driver genes: *"2.CNA-hclut.R"*
 - Comparison of survival rate between groups of patients: *"3.CNA-SA.R"*
 - Observing the differences between the two groups with the other clinical features: *"4.CNA-test.R"*
