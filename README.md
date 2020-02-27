@@ -12,6 +12,9 @@ This repository contains source code, original/preprocessed datasets and publica
  - Depending on the cancer of interest and the purpose of research, several aspects of driver genes can be selected for analysis
 
 The workflow is also be applied to the identification and analysis of driver genes for breast cancer patients. All statistical analyses were performed using R statistical software.
+
+#####All data can be downloaded [here](https://drive.google.com/drive/folders/1v-W_ILNXbRHSvLlS0XqFGEQqkQ-q9kZm?usp=sharing). The data and source code should in the same folder!
+
 #### 2. Pipeline
 
 ![Figure1](https://imgur.com/ujBkHCl.png)
