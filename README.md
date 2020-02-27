@@ -41,6 +41,6 @@ Fig.2: Application of the workflow to the identification and analysis of driver 
 - Observing the differences between the two groups with the other clinical features: *"4.CNA-test.R"*
 
 #### 4. Contact
-Feel free to contact [Quang-Huy Nguyen](https://github.com/huynguyen250896) or [Duc-Hau Le](https://github.com/hauldhut) hauldhut@gmail.com for any questions about the paper, datasets, code and results.
+Feel free to contact [Quang-Huy Nguyen](https://github.com/huynguyen250896) or [Duc-Hau Le](https://github.com/hauldhut) (hauldhut@gmail.com) for any questions about the paper, datasets, code and results.
 
 
