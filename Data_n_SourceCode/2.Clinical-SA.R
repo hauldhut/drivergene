@@ -1,8 +1,7 @@
 #library
-if(!require(survival)) install.packages('survival')
-if(!require(Hmisc)) install.packages('Hmisc')
-library('survival')
-library('Hmisc')
+if(!require(devtools)) install.packages("devtools")
+devtools::install_github("huynguyen250896/geneSA")
+library(geneSA)
 
 # create event vector for RNASeq data
 #>median is up-regulated genes and <median is down regulated genes
@@ -24,13 +23,4 @@ colnames(event_rna)[36:37] <- c("time", "event")
 event_rna[1:5,1:5] 
 
 #check what driver genes are significantly correlated with outcome
-set.seed(420)
-lapply(driver,
-       
-       function(x) {
-         
-         formula <- as.formula(paste('Surv(time,event)~',as.factor(x)))
-         coxFit <- coxph(formula, data = event_rna)
-         
-         summary(coxFit)
-       })
+geneSA(genename = driver, event = event_rna)

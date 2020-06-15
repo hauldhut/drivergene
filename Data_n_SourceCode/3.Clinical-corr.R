@@ -1,9 +1,7 @@
 #library
-devtools::install_github("huynguyen250896/computeQ")
+if(!require(devtools)) install.packages("devtools")
 devtools::install_github("huynguyen250896/computeC")
-library(computeQ) #compute the Q-value
 library(computeC) #compute the correlation
-library(dplyr)
 
 #create the necessary df
 cor=t(exp_dri_norm)

@@ -4,13 +4,10 @@ cna<-read.table('data_CNA.txt', sep = '\t', check.names = FALSE, header = TRUE, 
 #check dimension and adjust slightly the form of CNV, clinical data.
 cna=cna[,-1]
 dim(cna) #22544  2173
-#check missing value
+
+#transform to matrix
 cna=as.matrix(cna)
-table(is.finite(cna))
-# FALSE     TRUE 
-# 2356 48985756
-library(CancerSubtypes)
-cna=data.imputation(cna, fun="mean")
+
 #extract the same sample names CNV and clinical share
 s_cna_cli=intersect(colnames(cna), clinical$PATIENT_ID)
 length(s_cna_cli) #2173
