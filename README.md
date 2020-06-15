@@ -3,7 +3,7 @@
 ## User Manual
 ---
 #### 1. Introduction
-This repository contains source code, original/preprocessed datasets and publication-quality figures for the paper "A workflow for identification and analysis of driver genes: a case study in breast cancer". This workflow aims to systematically integrate state-of-the-art computational tools to identify, characterize the driver genes and then predict their specific subgroups, which establish the basis for the understanding and further validations of driver genes in the future. We divide the work into two parts: (I) IDENTIFICATION and (II) ANALYSIS, in which the specific tasks of each part as follows:
+This repository contains source code, original/preprocessed datasets and publication-quality figures for the paper "An improved protocol for identification and analysis of driver genes using multi-omics data". This workflow aims to systematically integrate state-of-the-art computational tools to identify, characterize the driver genes and then predict their specific subgroups, which establish the basis for the understanding and further validations of driver genes in the future. We divide the work into two parts: (I) IDENTIFICATION and (II) ANALYSIS, in which the specific tasks of each part as follows:
 
 (I) IDENTIFICATION
  - Omics data are as input to identify driver genes by driver gene identification tools
