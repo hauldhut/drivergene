@@ -1,10 +1,5 @@
 rm(list=ls())
-# Display the current working directory
-getwd();
-# If necessary, change the path below to the directory where the data files are stored.
-# "." means current directory. On Windows use a forward slash / instead of the usual \.
-workingDir = ".";
-setwd(workingDir);
+
 #library
 library(dplyr)
 library(tidyr)
@@ -16,13 +11,12 @@ clinical<-read.table('data_clinical_patient.txt', sep = '\t', check.names = FALS
 dim(clinical) # 2509   22
 dim(exp_dri_norm) # 18534  1906
 #####prepare data
-driver=c("MAP2K4","ARID1A", "PIK3CA", "TBX3", "MAP3K1", "CBFB", "TP53", "KMT2C",
-         "AKT1", "GATA3", "RUNX1", "PTEN", "CDH1", "NF1", "PIK3R1", "RB1", "CDKN1B",
-         "NCOR1", "CDKN2A", "ERBB2", "ERBB3", "FOXO3", "SMAD4", "KRAS", "BRCA2",
-         "BAP1", "GPS2", "AGTR2", "ZFP36L1", "MEN1", "CHEK2", "SF3B1", "AHNAK2",
-         "SYNE1", "MUC16")
-length(driver) #35
-table(driver %in% exp_dri_norm$Hugo_Symbol) #check, TRUE = 35
+driver=c("MAP2K4", "ARID1A", "PIK3CA", "TBX3", "MAP3K1", "TP53", "AKT1", "GATA3", "CDH1", "RB1",
+         "CDKN1B", "NCOR1", "CDKN2A", "ERBB2", "KRAS", "BRCA2", "BAP1", "PTEN", "CBFB", "KMT2C",
+         "RUNX1", "NF1", "PIK3R1", "ERBB3", "FOXO3", "SMAD4", "GPS2", "AGTR2", "ZFP36L1", "MEN1",
+         "SF3B1")
+length(driver) #31
+table(driver %in% exp_dri_norm$Hugo_Symbol) #check, TRUE = 31
 table(exp_dri_norm$Hugo_Symbol %in% driver) #check
 #exp with row = driver genes
 exp_dri_norm=exp_dri_norm[,-2]#remove Entrez_Gene_Id column
@@ -48,11 +42,6 @@ colnames(clinical_exp) = c("lymph", "npi", "OS_MONTHS", "stage", "OS_STATUS")
 rownames(clinical_exp) = colnames(exp_dri_norm)
 
 dim(clinical_exp) #1904 5
-dim(exp_dri_norm)# 35 1904
-max(exp_dri_norm)# 13.1189
-min(exp_dri_norm)# -7.5848
-table(is.finite(as.matrix(exp_dri_norm))) #check missing value
+dim(exp_dri_norm)# 31 1904
 
-exp_dri_norm[1:5,1:5]
-clinical_exp[1:5,1:5]
 

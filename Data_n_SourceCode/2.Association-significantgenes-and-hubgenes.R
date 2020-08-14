@@ -73,7 +73,7 @@ View(intra_modular_analysis)
 
 #high intramodular connectivity ~ high kwithin => hub genes (kwithin: connectivity of the each driver gene in the turquoise module to all other genes in the turquoise)
 connectivity=intramodularConnectivity(adjacency, moduleColors)
-connectivity = connectivity[colnames(t(exp_dri_norm))[moduleColors=="turquoise"],] #only the turquoise module
+connectivity = connectivity[colnames(t(exp_dri_norm))[moduleColors=="blue"],] #only the turquoise module
 order.kWithin = order(connectivity$kWithin, decreasing = TRUE)
 connectivity = connectivity[order.kWithin,] #order rows following kWithin
 connectivity = connectivity[1:5,] #top 5 genes that have a high connectivity to other genes in the turquoise module

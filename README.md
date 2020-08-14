@@ -1,9 +1,9 @@
-# An improved protocol for identification and analysis of driver genes using multi-omics data
+# Improving existing analysis pipeline to identify and analyze cancer driver genes using multi-omics data
 ---
 ## User Manual
 ---
 #### 1. Introduction
-This repository contains source code, original/preprocessed datasets and publication-quality figures for the paper "An improved protocol for identification and analysis of driver genes using multi-omics data". This workflow aims to systematically integrate state-of-the-art computational tools to identify, characterize the driver genes and then predict their specific subgroups, which establish the basis for the understanding and further validations of driver genes in the future. We divide the work into two parts: (I) IDENTIFICATION and (II) ANALYSIS, in which the specific tasks of each part as follows:
+This repository contains source code, original/preprocessed datasets and publication-quality figures for the paper "Improving existing analysis pipeline to identify and analyze cancer driver genes using multi-omics data". This pipeline aims to systematically integrate state-of-the-art computational tools to identify, characterize the driver genes and then predict their specific subgroups, which establish the basis for the understanding and further validations of driver genes in the future. We divide the work into two parts: (I) IDENTIFICATION and (II) ANALYSIS, in which the specific tasks of each part as follows:
 
 (I) IDENTIFICATION
  - Omics data are as input to identify driver genes by driver gene identification tools
@@ -18,7 +18,7 @@ The workflow is also be applied to the identification and analysis of driver gen
 #### 2. Pipeline
 
 ![Figure1](https://imgur.com/B4831A1.png)
-Figure. 1 | Workflow for identification and analysis of driver genes. The workflow comprises two stages, which are identification & analysis, in which the former uses the OncodriveFML and OncodriveCLUSTL to identify driver genes with somatic mutation data as input, and the latter performs the four most widely focused analyses to deal with those drivers. Abbreviation: CNV, Copy number variations.
+Figure 1. Improved analysis pipeline for identification and analysis of driver genes. The scheme comprises two stages: identification and analysis, in which the former uses the OncodriveFML and OncodriveCLUSTL to identify driver genes with somatic mutation data as input, and the latter performs the four most widely focused analyses to deal with those driver genes. Abbreviation: CNV, Copy number variations.
 
 Here, we use the METABRIC breast cancer (BRCA) dataset as an example to demonstrate the general usability of our workflow to (1) identify and (2) analyze the driver genes.
 #### 3. Implementation

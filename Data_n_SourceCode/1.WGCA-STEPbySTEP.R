@@ -9,8 +9,8 @@ library("dynamicTreeCut") # Module identification
 library("flashClust")  #Fast implementation of hierarchical clustering
 library("Hmisc")  #perform variables clustering
 library("WGCNA")   #WGCNA tool
-library(purrr)      #data processing
-library(cluster)    # compute agglomerative coefficient
+library("purrr")      #data processing
+library("cluster")    # compute agglomerative coefficient
 
 # The following setting is important, do not omit.
 options(stringsAsFactors = FALSE);
@@ -34,10 +34,10 @@ plot(sft$fitIndices[,1], -sign(sft$fitIndices[,3])*sft$fitIndices[,2],
 text(sft$fitIndices[,1], -sign(sft$fitIndices[,3])*sft$fitIndices[,2],
      labels=powers,cex=cex1,col="red");
 # this line corresponds to using an R^2 cut-off of h
-abline(h=0.44,col="red")
+abline(h=0.24,col="red")
 
 
-softPower = 7;
+softPower = 6;
 adjacency = adjacency(t(exp_dri_norm), power = softPower,
                       type = "signed");
 
@@ -56,7 +56,7 @@ ac <- function(x) {
 
 map_dbl(m, ac) # Agglomerative coefficient of each agglomeration method
 # average    single  complete      ward 
-# 0.4179746 0.3560380 0.4875150 0.5762828 
+# 0.4136737 0.3510251 0.4815638 0.5563910  
 
 #assign gene names from adjacency to dissTOM
 rownames(dissTOM) = rownames(adjacency) 
@@ -76,14 +76,14 @@ dynamicMods = cutreeDynamic(dendro = geneTree, distM = dissTOM,
 table(dynamicMods)
 # dynamicMods
 # 1  2 
-# 19 16 
+# 16 15 
 
 # Convert numeric lables into colors
 moduleColors = labels2colors(dynamicMods)
 table(moduleColors)
 # moduleColors
-# grey turquoise 
-# 2        33 
+# blue turquoise 
+# 15        16 
 # Plot the dendrogram and colors underneath
 sizeGrWindow(5,6)
 plotDendroAndColors(geneTree, moduleColors, "Module Colors",
