@@ -16,7 +16,7 @@ clinical_exp <- clinical_exp %>%
   mutate(status = ifelse(clinical_exp$OS_STATUS == "LIVING",0,1)) #set event: death = 1, alive = 0
 
 #Make sure samples that in event_rna are also included in rows of clinical_exp and in exactly the same order
-all(rownames(clinical_exp) == rownames(clinical_exp))
+all(rownames(event_rna) == rownames(clinical_exp))
 #[1] TRUE
 
 #check which driver gene is significantly correlated with patient outcome
